@@ -2,10 +2,12 @@ import os
 from flask import Flask,render_template,request,flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+import csv
 
 
 #Have pandas installed in your virtual environment  using the command "pip install pandas"
 import pandas as pd
+import numpy as np
 
 #initialize our app
 app = Flask(__name__)
@@ -15,7 +17,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:root@localhost:54
 
 #initialize the database to our app
 db = SQLAlchemy(app)
-
+rows = []
 
 # Create our database schema,,,,,,,you first have to 'flask db init' before, 'flask db migrate' then af
 #each time the database models change repeat the migrate and upgrade
@@ -32,13 +34,21 @@ class Data(db.Model):
     date = 			db.Column(db.DateTime)
 
 
-
-@app.route("/test",methods=['GET', 'POST'])
+@app.route("/test", methods=['GET', 'POST'])
 def test():
-	#read the from the dataset
-	data = pd.read_csv("Dataset.csv")
-	#data = Data.query.all()
-	return render_template('test.html',data=data)
+	dataset = pd.read_csv("Dataset.csv")
+	
+	with open('Dataset.csv', 'r') as csvFile:
+		reader = csv.reader(csvFile)
+		for row in reader:
+			print(row)
+				#data = Data.query.all()
+	return render_template('test.html',data=rows)
+
+
+
+
+
 
 @app.route("/home",methods=['GET', 'POST'])
 def peana():

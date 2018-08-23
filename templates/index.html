@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Table</title>
+   </head>
+	<title>Simple tables</title>
+<!--<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<div class="row justify-content-center">-->
+<body>
+      <table style="width:50%">
+        
+          <tr>
+            <th>Produce_variety</th> 
+            <th>Commodity_type</th>
+            <th>Unit</th>
+            <th>Volume_in_Kgs</th>
+            <th>Value_in_Kshs</th>
+            <th>Date</th>
+          </tr>
+            {% for record in results %}
+          <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+          </tr>
+           {% endfor %}
+        </div>
+      </table>
+</body>
+	
+</html>
