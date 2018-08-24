@@ -5,7 +5,7 @@
 
 The below article will cover the steps to be followed when setting up  the whole app. This is more like a documentation of what i was able to do and what i was not able to do and will have out of sequence instructions or solutions to errors so read thoroughly.
 
-####What i was able to do
+# # # #What i was able to do
 1.I first created a virtualenv using python3
 
 2.Activated the virtulenv then installed flask
@@ -23,7 +23,7 @@ I was able to import the data from the csv file to a postgress table
 
 Was not able to create interface for the user to interact with the above data
 
-####What is to be done
+# # # #What is to be done
 1. Create a function to render a template with varoius  buttons e.g  to show data for a specific day,data for a certain range of prices,give the user ability to query for a specific range of data and so many as long as they are required
 
 2.APIs-this could involve creation of endpoints as stipulated in our problem statement
