@@ -30,9 +30,11 @@ class Data(db.Model):
     produce_variety = db.Column(db.String(120))
     commodity_type = db.Column(db.String(120))
     unit =           db.Column(db.String(120))
-    volume_in_kg =  db.Column(db.String(120))
+    volume_in_kg =  db.Column(db.Integer)
+    value_in_KShs =  db.Column(db.Integer)
     date = 			db.Column(db.DateTime)
 
+#INSERT INTO data(produce_variety,commodity_type,unit,volume_in_kg,date,value_in_KShs)VALUES('Horticulture','Cabbages','Ext Bag',126 , 2205.00 ,'1/1/2012 0:00');
 
 @app.route("/test", methods=['GET', 'POST'])
 def test():
@@ -40,9 +42,15 @@ def test():
 	
 	with open('Dataset.csv', 'r') as csvFile:
 		reader = csv.reader(csvFile)
+		headers = next(reader) # for python 2 its reader.next()
 		for row in reader:
-			print(row)
-				#data = Data.query.all()
+			#print(row[0],row[1],row[2],row[3],row[4])
+			record = Data(id =id,produce_variety = row[0],  commodity_type = row[1],  unit = row[2],volume_in_kg =row[3], date=row[4])
+			print("record adde", record)
+			db.session.add(record)
+			db.session.commit()
+			print("record added")
+			#data = Data.query.all()
 	return render_template('test.html',data=rows)
 
 
@@ -55,20 +63,6 @@ def peana():
 	#read the from the dataset
 	data = Data.query.all()
 	return render_template('index.html',data=data)
-@app.route("/data", methods=['POST','GET'])
-def data():
-	return '''committed!Z!'''
-
-
-@app.route("/feed", methods=['GET', 'POST'])
-def feed():
-	
-	return render_template('mimi.html')
-
-
-@app.route("/yes")
-def connect():
-	return "i like what i am seeing"
 
 
 if __name__ == '__main__':
