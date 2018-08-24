@@ -4,9 +4,13 @@
 # Setting up flask app  with a postgress
 
 The below article will cover the steps to be followed when setting up  the whole app. This is more like a documentation of what i was able to do and what i was not able to do and will have out of sequence instructions or solutions to errors so read thoroughly.
+
 1.I first created a virtualenv using python3
+
 2.Activated the virtulenv then installed flask
+
 3.Got postgress installed in my laptop so it is all about creating the table
+
 4.Copied the csv file you shared
 
 
