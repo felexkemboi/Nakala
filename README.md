@@ -29,7 +29,11 @@ Was not able to create interface for the user to interact with the above data
 I will need atleast 4 days to fully develop the system as per your requirement.If possible you could give me another 4 days to finish up the task.
 
 That was what i was able to do for the 20hrs given.
+You may add a [title](http://agea.github.io/tutorial.md "Markdown Tutorial") to your link (can you see the tooltip?)
 
+- If your link contains spaces you have to write the [link](<http://example.com/a space>) between `<>`
+
+- You can use spaces and markup inside the [link **text**](http://agea.github.io/tutorial.md)
 Meanwhile you can check the code snippet below or see the raw code in my Repository(/https://github.com/felexkemboi/Nakala/)
 
 
