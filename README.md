@@ -11,14 +11,28 @@ The below article will cover the steps to be followed when setting up  the whole
 
 3.Got postgress installed in my laptop so it is all about creating the table
 
-4.Copied the csv file you shared
+4.Copied the csv file you shared to the same directory with app.py
+
+5.Read the data from the csv file,each row and presented it as a list
+
+6.Loop through the list and get each item,read it as cell,then feed each cell to the database
 
 
 I was able to import the data from the csv file to a postgress table
 
 Was not able to create interface for the user to interact with the above data
 
-I will need atleast 4 days to fully develop the system as per your requirement.If possible you could give me another 4 days to finish up the task.That was what i was able to do for the 20hrs given.
+##What is to be done
+1. Create a function to render a template with varoius  buttons e.g  to show data for a specific day,data for a certain range of prices,give the user ability to query for a specific range of data and so many as long as they are required
+
+2.APIs-this could involve creation of endpoints as stipulated in our problem statement
+I will need atleast 4 days to fully develop the system as per your requirement.If possible you could give me another 4 days to finish up the task.
+
+That was what i was able to do for the 20hrs given.
+
+Meanwhile you can check the code snippet below or see the raw code in my Repository(/https://github.com/felexkemboi/Nakala/)
+
+
 
 ## Setting up a database
 
