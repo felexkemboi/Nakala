@@ -1,5 +1,5 @@
 #   NAKALA
-# Setting up flask app  with a postgress sql
+# Setting up flask app  with a postgress 
 
 The below article will cover the steps to be followed when setting up  the whole app. This is more like a documentation of what i was able to do and what i was not able to do and will have out of sequence instructions or solutions to errors so read thoroughly.
 
